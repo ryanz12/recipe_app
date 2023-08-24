@@ -1,0 +1,126 @@
+body{
+    background: #313D5A;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#searchForm{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 40vw;
+    border-radius: 12px;
+}
+
+#searchInput, #searchForm>button{
+    font-size: .95rem;
+}
+
+#searchInput{
+    flex: 1;
+    height: 5vh;
+    border: none;
+    outline: none;
+}
+
+#searchForm>button{
+    border: none;
+    padding: 10px 30px;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+}
+
+#searchForm>button:hover{
+    background: rgb(214, 214, 214);
+}
+
+#searchForm>span{
+    padding: 10px;
+}
+
+#srHeader{
+    padding-left: 150px;
+    color: white;
+}
+
+#searchResultContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 150px;
+    grid-gap: 50px;
+}
+
+.gridItem{
+    background-color: white;
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+.gridItem>h2{
+    padding: 10px;
+    margin: 0;
+}
+
+.gridItem>p{
+    color: rgb(61, 61, 61);
+    padding-left: 20px;
+}
+
+.gridItem>p:last-child{
+    margin-top: 0;
+}
+
+.gridItem:hover{
+    transform: scale(1.025);
+    box-shadow: 0 0 10px 2px white, 0 0 20px 10px rgba(255, 255, 255, 0.5);
+}
+
+#specificRecipe{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 60vh;
+    width: 60vw;
+    overflow-x: auto;
+    border: 2px solid black;
+}
+
+#specificRecipe>*{
+    color: black;
+}
+
+#recipeTitle{
+    text-align: center;
+}
+
+#recipeInstructions{
+    white-space: pre-line;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+
+#recipeIngredients>h2{
+    padding: 0 20px;
+}
+
+#specificRecipe>div>span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
